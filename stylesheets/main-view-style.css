@@ -1,0 +1,52 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+@font-face{
+	font-family:'Berlin Sans FB';
+    src: url('/fonts/BRLNSR.ttf');
+}
+@font-face{
+	font-family:'Gruppo';
+    src: url('/fonts/Gruppo.ttf');
+}
+@font-face{
+	font-family:'Sonsie One';
+    src: url('/fonts/SonsieOne-Regular.ttf');
+}
+.logo-name{
+	-fx-font-family:'Berlin Sans FB';
+	-fx-font-size:20px;
+}
+.seperator{
+	-fx-background-color: white;
+    -fx-pref-height: 32;
+    -fx-border-color: null ;
+    -fx-border-width:1;
+}
+.transparent{
+	-fx-background-color:rgba(0,0,0,0);
+}
+.round-layout{
+	-fx-border-radius:50%;
+	-fx-border-color:#bcc5d4;
+}
+.user-name{
+	-fx-text-fill:white;
+}
+.top-bar{
+	-fx-background-color:#5b7085;
+}
+.white-background{
+	-fx-background-color:#ffffff;
+}
+.menu-head{
+		-fx-font-family: 'Gruppo';
+		-fx-font-size:18px;
+		-fx-text-fill:black;
+}
+.side-bar{
+	-fx-background-color:silver;
+}
+.list-item{
+}
+.list-item:hover{
+	-fx-background-color:white;
+}

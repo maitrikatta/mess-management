@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" styleClass="white-background" stylesheets="@/stylesheets/attendance-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AttendanceController">
+   <children>
+      <HBox alignment="CENTER" layoutX="56.0" layoutY="14.0" prefHeight="63.0" prefWidth="1272.0" styleClass="food-background" stylesheets="@/stylesheets/attendance-style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="250.0" styleClass="white-background" stylesheets="@/stylesheets/attendance-style.css" HBox.hgrow="NEVER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="229.0" styleClass="serach-box" stylesheets="@/stylesheets/attendance-style.css">
+                     <children>
+                        <TextField fx:id="fx_search_field" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="202.0" promptText="Enter first and last name" styleClass="transparent" stylesheets="@/stylesheets/attendance-style.css" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#searchBtnClicked" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+                           <image>
+                              <Image url="@../assets/search.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="fx_query_result_view" alignment="TOP_CENTER" fillHeight="false" layoutX="122.0" layoutY="160.0" prefWidth="1272.0" spacing="90.0" styleClass="white-background" stylesheets="@/stylesheets/attendance-style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="168.0">
+         <children>
+            <VBox prefHeight="311.0" prefWidth="288.0" styleClass="information-snippet" stylesheets="@/stylesheets/attendance-style.css">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="288.0">
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="258.0" styleClass="information-snippet-heading" stylesheets="@/stylesheets/attendance-style.css" text="Customer Information" textFill="#155ef2a3" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="288.0" stylesheets="@/stylesheets/attendance-style.css">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" stylesheets="@/stylesheets/attendance-style.css" text="First Name" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="SansSerif Regular" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="berlin-font" />
+                              <String fx:value="information-items" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_first_name" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" text="Yogesh">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="42.0" prefHeight="46.0" prefWidth="288.0" stylesheets="@/stylesheets/attendance-style.css">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" stylesheets="@/stylesheets/attendance-style.css" text="Last Name" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="SansSerif Regular" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="berlin-font" />
+                              <String fx:value="information-items" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_last_name" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" text="Kakde">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="88.0" prefHeight="46.0" prefWidth="288.0" stylesheets="@/stylesheets/attendance-style.css">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" stylesheets="@/stylesheets/attendance-style.css" text="Gender" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="SansSerif Regular" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="berlin-font" />
+                              <String fx:value="information-items" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_gender" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" text="Male">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="135.0" prefHeight="46.0" prefWidth="288.0" stylesheets="@/stylesheets/attendance-style.css">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" stylesheets="@/stylesheets/attendance-style.css" text="Age" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="SansSerif Regular" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="berlin-font" />
+                              <String fx:value="information-items" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_age" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="111.0" text="24">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="181.0" prefHeight="46.0" prefWidth="288.0" stylesheets="@/stylesheets/attendance-style.css">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="114.0" stylesheets="@/stylesheets/attendance-style.css" text="Admission On" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="SansSerif Regular" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="berlin-font" />
+                              <String fx:value="information-items" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_admission_date" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="92.0" text="24/10/2022">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="311.0" prefWidth="288.0" styleClass="information-snippet" stylesheets="@/stylesheets/attendance-style.css">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="288.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="292.0" styleClass="information-snippet-heading" stylesheets="@/stylesheets/attendance-style.css" text="Attendance" textFill="#155ef2a3">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="288.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="100.0" stylesheets="@/stylesheets/attendance-style.css" text="Meal Date">
+                           <font>
+                              <Font name="Berlin Sans FB" size="12.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="information-items" />
+                              <String fx:value="berlin-font" />
+                           </styleClass>
+                        </Label>
+                        <DatePicker fx:id="fx_meal_date" editable="false" onAction="#dateSelected" prefHeight="26.0" prefWidth="150.0" HBox.hgrow="SOMETIMES" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="288.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="100.0" stylesheets="@/stylesheets/attendance-style.css" text="Meal Time" HBox.hgrow="NEVER">
+                           <styleClass>
+                              <String fx:value="information-items" />
+                              <String fx:value="berlin-font" />
+                           </styleClass>
+                        </Label>
+                        <CheckBox fx:id="fx_lunch" mnemonicParsing="false" text="Lunch">
+                           <font>
+                              <Font name="Segoe UI Light" size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="fx_dinner" mnemonicParsing="false" text="Dinner">
+                           <font>
+                              <Font name="Segoe UI Light" size="16.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="57.0" prefHeight="47.0" prefWidth="288.0" spacing="5.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="100.0" stylesheets="@/stylesheets/attendance-style.css" text="Total Meal" HBox.hgrow="NEVER">
+                           <styleClass>
+                              <String fx:value="information-items" />
+                              <String fx:value="berlin-font" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_total_meal_lunch" alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="78.0" text="15 Lunch">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fx_total_meal_dinner" alignment="CENTER" layoutX="120.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="79.0" text="6 Dinner">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="167.0" prefHeight="47.0" prefWidth="288.0" spacing="5.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="100.0" stylesheets="@/stylesheets/attendance-style.css" text="Expires In" HBox.hgrow="NEVER">
+                           <styleClass>
+                              <String fx:value="information-items" />
+                              <String fx:value="berlin-font" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="fx_expires_in" alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="47.0" prefWidth="78.0" text="5 Days">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="167.0" prefHeight="47.0" prefWidth="288.0" spacing="5.0">
+                     <children>
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#submitAttendance" prefHeight="30.0" prefWidth="79.0" text="Save" HBox.hgrow="SOMETIMES">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

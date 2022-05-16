@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane accessibleText="Help me" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1121.0" stylesheets="@/stylesheets/add-new-user-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.updateUserController">
+   <children>
+      <VBox layoutX="14.0" layoutY="75.0" prefHeight="272.0" prefWidth="376.0" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="778.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <HBox maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="377.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="336.0" styleClass="main-heading" text="Personal Information">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="416.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" text="First Name">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_fname" disable="true" editable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="John">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Last Name">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_lname" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="Doe">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="64.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Age">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_age" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="Numeric only">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="119.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Gender">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="fx_male" mnemonicParsing="false" stylesheets="@/stylesheets/add-new-user-style.css" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                     </toggleGroup>
+                     <styleClass>
+                        <String fx:value="berlin-font" />
+                        <String fx:value="gender" />
+                     </styleClass>
+                  </RadioButton>
+                  <RadioButton fx:id="fx_female" mnemonicParsing="false" stylesheets="@/stylesheets/add-new-user-style.css" text="Female" toggleGroup="$genderGroup">
+                     <styleClass>
+                        <String fx:value="berlin-font" />
+                        <String fx:value="gender" />
+                     </styleClass>
+                  </RadioButton>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="104.0" layoutY="8.0" prefHeight="47.0" prefWidth="800.0" spacing="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="fx_user_id" promptText="Numeric ID" />
+                  <ImageView fx:id="fx_search" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#checkUser" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="349.0" layoutY="48.0" orientation="VERTICAL" prefHeight="301.0" prefWidth="10.0" />
+      <VBox layoutX="364.0" layoutY="75.0" prefHeight="272.0" prefWidth="355.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="336.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="336.0" styleClass="main-heading" text="Address">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="3.0" prefWidth="359.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="State">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_state" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="Maharashtra">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="City">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_city" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="Pune">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="64.0" prefHeight="54.0" prefWidth="350.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Street">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_street" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="Shivaji Nagar">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Contact">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_mobile" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="mobile no.">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Separator layoutY="353.0" maxHeight="1.7976931348623157E308" prefHeight="20.0" prefWidth="1088.0" />
+      <Separator layoutX="721.0" layoutY="54.0" orientation="VERTICAL" prefHeight="302.0" prefWidth="10.0" />
+      <VBox layoutX="731.0" layoutY="74.0" prefHeight="262.0" prefWidth="355.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="336.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="336.0" styleClass="main-heading" text="Admission">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="3.0" prefWidth="359.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Admision On">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="fx_admission" editable="false" prefHeight="19.0" prefWidth="166.0" promptText="Select Only" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Fees Paid">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_fees_paid" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="eg. 1500">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="64.0" prefHeight="54.0" prefWidth="288.0" spacing="20.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" prefWidth="100.0" styleClass="berlin-font" stylesheets="@/stylesheets/add-new-user-style.css" text="Of Total">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fx_total_fees" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="eg. 1800">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Button contentDisplay="RIGHT" defaultButton="true" layoutX="432.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#updateUser" prefHeight="35.0" prefWidth="90.0" text="Update">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/save.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button cancelButton="true" contentDisplay="RIGHT" layoutX="542.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="35.0" prefWidth="100.0" text="Delete A/C" textFill="RED">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/trash_can.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutX="1088.0" layoutY="54.0" orientation="VERTICAL" prefHeight="302.0" prefWidth="10.0" />
+   </children>
+</AnchorPane>
